@@ -96,7 +96,7 @@ header{
 
 /* Hero */
 .hero{
-  padding:88px 0 64px;
+  padding:48px 0 40px;
   position:relative;
   overflow:hidden;
 }
@@ -104,18 +104,18 @@ header{
   display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;
 }
 .hero h1{
-  font-size:clamp(36px,5vw,56px);
-  line-height:1.08;
-  margin-top:14px;
+  font-size:clamp(32px,4.4vw,48px);
+  line-height:1.1;
+  margin-top:10px;
 }
 .hero p.lede{
-  font-size:18px;
+  font-size:17px;
   color:var(--ink-soft);
-  margin-top:22px;
+  margin-top:16px;
   max-width:46ch;
 }
 .hero-actions{
-  margin-top:32px;
+  margin-top:24px;
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
 }
 .btn-primary{
@@ -148,7 +148,7 @@ header{
 }
 
 /* Section shell */
-section{padding:72px 0;}
+section{padding:56px 0;}
 .section-head{max-width:56ch;margin-bottom:44px;}
 .section-head h2{font-size:clamp(26px,3vw,32px);margin-top:12px;}
 .divider{border:none;border-top:1px solid var(--line);}

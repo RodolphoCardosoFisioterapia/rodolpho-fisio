@@ -163,6 +163,41 @@ function gtag_report_conversion(url) {
   </div>
 </section>
 
+<section id="estrutura">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Atendimento domiciliar</p>
+      <h2>Estrutura profissional, no conforto de casa</h2>
+    </div>
+    <div class="equip-grid">
+      <div class="equip-item">
+        <h3>Manta de LED</h3>
+        <p>Fototerapia utilizada no processo de reparo tecidual e redução de dor.</p>
+      </div>
+      <div class="equip-item">
+        <h3>Laser terapêutico</h3>
+        <p>Aplicado em lesões e no pós-operatório para estimular a cicatrização.</p>
+      </div>
+      <div class="equip-item">
+        <h3>Bota de compressão</h3>
+        <p>Recuperação muscular e melhora da circulação após esforço físico.</p>
+      </div>
+      <div class="equip-item">
+        <h3>Eletroterapia</h3>
+        <p>Usada para analgesia e fortalecimento muscular.</p>
+      </div>
+      <div class="equip-item">
+        <h3>Terapia manual</h3>
+        <p>Mobilização articular e técnicas manuais de tratamento.</p>
+      </div>
+      <div class="equip-item">
+        <h3>Liberação miofascial</h3>
+        <p>Trabalho de tensão e encurtamentos musculares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta">
   <div class="wrap">
     <p class="eyebrow">Vamos conversar</p>
@@ -176,11 +211,9 @@ function gtag_report_conversion(url) {
 
 <section id="contato-form">
   <div class="wrap lead-capture">
-    <p class="eyebrow">Prefere não ligar agora?</p>
-    <h2>Deixe seus dados que o Rodolpho te chama</h2>
-    <p>Sem compromisso. É só pra ele te retornar no seu tempo, sem precisar chamar no WhatsApp agora.</p>
-    <form class="lead-form" action="https://formspree.io/f/xvkoaknw" method="POST">
-      <input type="hidden" name="_next" value="obrigado.html">
+    <p class="eyebrow">Receba contato</p>
+    <h2>Deixe seu contato</h2>
+    <form class="lead-form" id="lead-form" action="https://formspree.io/f/xvkoaknw" method="POST">
       <input type="hidden" name="_subject" value="Novo lead do site — Esporte">
       <div>
         <label for="nome">Nome</label>
@@ -191,21 +224,31 @@ function gtag_report_conversion(url) {
         <input type="tel" id="whatsapp" name="WhatsApp" placeholder="(21) 90000-0000" required>
       </div>
       <div class="full">
-        <label for="motivo">O que você treina / precisa?</label>
-        <select id="motivo" name="Motivo">
-          <option>Corrida / triathlon</option>
-          <option>Ciclismo</option>
-          <option>Futebol</option>
-          <option>Outro esporte / não sei</option>
-        </select>
-      </div>
-      <div class="full">
-        <button class="btn-primary" type="submit" style="width:100%;">Quero que me chamem</button>
+        <button class="btn-primary" type="submit" style="width:100%;">Quero receber contato para orientação profissional</button>
       </div>
       <span class="lead-form-note">Seus dados são usados só pra esse contato.</span>
     </form>
   </div>
 </section>
+<script>
+document.getElementById('lead-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = e.target;
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {'Accept':'application/json'}
+  }).then(function(response){
+    if (response.ok) {
+      window.location.href = 'obrigado.html';
+    } else {
+      alert('Não foi possível enviar agora. Tenta de novo ou chama no WhatsApp.');
+    }
+  }).catch(function(){
+    alert('Não foi possível enviar agora. Tenta de novo ou chama no WhatsApp.');
+  });
+});
+</script>
 
 <footer>
   <div class="wrap footer-row">

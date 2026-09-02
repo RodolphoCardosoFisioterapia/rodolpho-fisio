@@ -228,6 +228,56 @@ section{padding:56px 0;}
   .athlete-grid img{height:280px;}
 }
 
+/* Lead capture */
+.lead-capture{
+  background:var(--sage-100);
+  border-radius:var(--radius);
+  padding:44px 32px;
+  text-align:center;
+}
+.lead-capture .eyebrow{display:flex;justify-content:center;}
+.lead-capture h2{margin-top:10px;font-size:clamp(22px,3vw,28px);}
+.lead-capture > p{color:var(--ink-soft);margin-top:10px;max-width:52ch;margin-left:auto;margin-right:auto;}
+.lead-form{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  max-width:640px;
+  margin-left:auto;margin-right:auto;
+  text-align:left;
+}
+.lead-form .full{grid-column:1/-1;}
+.lead-form label{
+  display:block;font-size:12.5px;font-weight:600;color:var(--forest-900);
+  margin-bottom:6px;
+}
+.lead-form input, .lead-form select{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  font-family:'Inter',sans-serif;
+  font-size:14.5px;
+  background:#fff;
+  color:var(--ink);
+}
+.lead-form input:focus, .lead-form select:focus{
+  outline:2px solid var(--accent);
+  outline-offset:1px;
+}
+.lead-form button.btn-primary{
+  border:none;cursor:pointer;justify-content:center;
+  font-family:'Inter',sans-serif;
+}
+.lead-form-note{
+  grid-column:1/-1;
+  font-size:12px;color:var(--ink-soft);margin-top:2px;
+}
+@media (max-width:600px){
+  .lead-form{grid-template-columns:1fr;}
+}
+
 /* Final CTA */
 .final-cta{
   text-align:center;

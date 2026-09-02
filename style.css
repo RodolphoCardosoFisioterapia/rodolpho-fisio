@@ -215,6 +215,22 @@ section{padding:56px 0;}
 .about-copy p{color:var(--ink-soft);font-size:16px;margin-bottom:16px;}
 .about-copy p:last-child{margin-bottom:0;}
 
+/* Equipment / structure */
+.equip-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.equip-item{
+  background:var(--bg);
+  padding:24px 26px;
+}
+.equip-item h3{font-size:16px;margin-bottom:6px;}
+.equip-item p{color:var(--ink-soft);font-size:14px;}
+@media (max-width:860px){
+  .equip-grid{grid-template-columns:1fr;}
+}
+
 /* Athlete section */
 .athlete-copy{max-width:62ch;margin-bottom:32px;}
 .athlete-copy p{color:var(--ink-soft);font-size:16px;}
